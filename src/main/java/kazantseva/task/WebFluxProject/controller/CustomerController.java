@@ -15,6 +15,6 @@ public class CustomerController {
 
     @PostMapping("/receive")
     public void receiveCustomer(@RequestBody Customer customer){
-        rabbitTemplate.convertAndSend("q.receive-customer",customer);
+        rabbitTemplate.convertAndSend("","q.receive-customer",customer);
     }
 }
