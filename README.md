@@ -12,5 +12,7 @@ WebClient calls the controller and sends multiple customers in parallel.
 The WebFluxProject project incorporates a range of technologies to deliver its functionality:
 - Java 17
 - Spring WebFlux
-- RabbitMQ
+- RabbitMQ (Reactor RabbitMQ)
+- Jackson ObjectMapper
 - Lombok
+- Docker Compose
