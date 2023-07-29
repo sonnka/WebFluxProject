@@ -3,7 +3,6 @@ package kazantseva.task.WebFluxProject.webclient;
 import kazantseva.task.WebFluxProject.model.Customer;
 import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.client.WebClient;
-import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Mono;
 
 import java.time.LocalDate;
@@ -39,7 +38,7 @@ public class CustomerWebClient {
                 .contentType(MediaType.APPLICATION_JSON)
                 .body(Mono.just(customer), Customer.class)
                 .retrieve()
-                .bodyToMono(ServerResponse.class)
+                .bodyToMono(Void.class)
                 .block();
     }
 
